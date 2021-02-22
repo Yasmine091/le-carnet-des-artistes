@@ -12,5 +12,8 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('home');
-
+    $router->resource('users', UserController::class);
+    $router->resource('events', EventController::class);
+    $router->resource('subjects', SubjectController::class);
+    $router->resource('adherents', AdherentController::class);
 });
