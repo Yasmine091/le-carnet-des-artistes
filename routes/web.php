@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\SubjectController;
+use App\Admin\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +23,9 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/home', [SubjectController::class, 'save'])->name('sendNewSubject');
+Route::post('/home', [SubjectController::class, 'subjectList'])->name('sendNewSubject');
+Route::get('/home', function(){
+    [HomeController::class, 'index'];
+    [SubjectController::class, 'subjectList'];
+})->name('home');

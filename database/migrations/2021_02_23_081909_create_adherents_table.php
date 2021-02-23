@@ -16,7 +16,7 @@ class CreateAdherentsTable extends Migration
         Schema::create('adherents', function (Blueprint $table) {
             $table->id();
             $table->string('first_name');
-            $table->string('first_name');
+            $table->string('last_name');
             $table->string('email');
             $table->string('number');
             $table->decimal('joined_on', 10, 0);
