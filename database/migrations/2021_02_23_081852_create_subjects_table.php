@@ -16,6 +16,9 @@ class CreateSubjectsTable extends Migration
         Schema::create('subjects', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
+            $table->string('content');
+            $table->boolean('allow');
+            $table->boolean('status');
             $table->timestamps();
         });
     }
