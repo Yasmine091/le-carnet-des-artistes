@@ -7,6 +7,7 @@ use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends AdminController
 {
@@ -30,8 +31,8 @@ class UserController extends AdminController
         $grid->column('first_name', __('Prénom'))->sortable();
         $grid->column('last_name', __('Nom'))->sortable();
         $grid->column('email', __('Mail'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        $grid->column('created_at', __('Crée à'));
+        $grid->column('updated_at', __('Mis à jour à'));
 
         return $grid;
     }
@@ -47,8 +48,11 @@ class UserController extends AdminController
         $show = new Show(User::findOrFail($id));
 
         $show->field('id', __('ID'));
-        $show->field('created_at', __('Created at'));
-        $show->field('updated_at', __('Updated at'));
+        $show->field('first_name', __('Prénom'));
+        $show->field('last_name', __('Nom'));
+        $show->field('email', __('Mail'));
+        $show->field('created_at', __('Crée à'));
+        $show->field('updated_at', __('Mis à jour à'));
 
         return $show;
     }
@@ -63,8 +67,13 @@ class UserController extends AdminController
         $form = new Form(new User);
 
         $form->display('id', __('ID'));
-        $form->display('created_at', __('Created At'));
-        $form->display('updated_at', __('Updated At'));
+        $form->text('first_name', __('Prénom'));
+        $form->text('last_name', __('Nom'));
+        $form->email('email', __('Mail'));
+        $form->password('password',  __('Mot de passe'));
+        $form->password('password', __('Confirmez votre mot de passe'));
+        $form->display('created_at', __('Crée à'));
+        $form->display('updated_at', __('Mis à jour à'));
 
         return $form;
     }
