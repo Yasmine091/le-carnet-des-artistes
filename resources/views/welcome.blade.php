@@ -14,7 +14,7 @@
                         <p>
                             Le théâtre est une fête et un travail !<br>
                             Cet art joyeux et populaire renforce la capacité de chacun à trouver sa liberté face aux contraintes.<br>
-                            Les Ateliers Théâtre des Bords de Scènes proposent, aux débutants comme aux amateurs expérimentés,
+                            Les Ateliers Théâtre de la Société les Beaux-Parleurs proposent, aux débutants comme aux amateurs expérimentés,
                             de faire partie d’un groupe de comédiens.<br>
                             Accompagnés et dirigés par des comédiens – metteurs en scènes
                             professionnels, chaque atelier participe à la création d’un spectacle.</p>
@@ -24,8 +24,6 @@
                             écoute de soi, créativité, improvisation.<br>
                             La suite de l’année est dédiée à l’élaboration progressive
                             du spectacle, sur un thème commun à tous les ateliers.<br>
-                            Le travail trouvant son aboutissement lors de
-                            deux représentations publiques au mois de juin au Théâtre Jean Dasté, Juvisy-sur-Orge.
                         <p>
 
                     </div>
