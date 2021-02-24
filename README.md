@@ -26,7 +26,17 @@
 * FontAwesome Icons
 
 ## Version en ligne
-* http://le-carnet-des-artistes.herokuapp.com/
+* Espace membres : http://le-carnet-des-artistes.herokuapp.com/
+* Espace président : http://le-carnet-des-artistes.herokuapp.com/admin
+```
+Comptes ~ Espace membres :
+Membre autorisé -> j.doe@gmail.com : JohnDoe16
+Membre non autorisé -> c.dubosq@outlook.com : Charles25
+
+Comptes ~ Espace président :
+Président -> Deedee : Deedee34
+
+```
 
 ## Ressources du projet
 * Trello : https://trello.com/c/C2rVgdPp/

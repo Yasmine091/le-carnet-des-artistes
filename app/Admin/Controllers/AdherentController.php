@@ -16,7 +16,7 @@ class AdherentController extends AdminController
      *
      * @var string
      */
-    protected $title = 'Example controller';
+    protected $title = 'Adhérents';
 
     /**
      * Make a grid builder.
@@ -75,7 +75,7 @@ class AdherentController extends AdminController
         $form->text('last_name', __('Nom'));
         $form->email('email', __('Mail'));
         $form->text('number', __('Numéro de téléphone'));
-        $form->date('joined_on', __('A rejoint le'))->format('X');
+        $form->date('joined_on', __('A rejoint le'))->format('L');
         $form->display('created_at', __('Crée à'));
         $form->display('updated_at', __('Mis à jour à'));
 

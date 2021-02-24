@@ -16,7 +16,7 @@ class SubjectController extends AdminController
      *
      * @var string
      */
-    protected $title = 'Example controller';
+    protected $title = 'Sujets';
 
     /**
      * Make a grid builder.
@@ -70,7 +70,7 @@ class SubjectController extends AdminController
         $form = new Form(new Subject);
 
         $form->display('id', __('ID'));
-        $form->display('user_id', __('ID de l\'utilisateur'));
+        $form->text('user_id', __('ID de l\'utilisateur'));
         $form->text('content', __('Sujet'));
         $form->select('status', __('Apparu'))->options([1 => 'Oui', 0 => 'Non']);
         $form->select('allow', __('Status du sujet'))->options([1 => 'Approuvé', 0 => 'Refusé']);

@@ -24,8 +24,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::post('/home', [SubjectController::class, 'save'])->name('sendNewSubject');
-Route::post('/home', [SubjectController::class, 'subjectList'])->name('sendNewSubject');
 Route::get('/home', function(){
-    [HomeController::class, 'index'];
-    [SubjectController::class, 'subjectList'];
-})->name('home');
+    $subjects = new SubjectController;
+    return view('home', ['subjects' => $subjects->subjectList()]);
+}
+)->name('home');
