@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\SubjectController;
-use App\Admin\Controllers\HomeController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\AdherentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +18,12 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $events = new EventController;
+    $adherents = new AdherentController;
+    return view('welcome', [
+        'events' => $events->eventList(),
+        'adherents' => $adherents->adherentList()
+    ]);
 });
 
 Auth::routes();
