@@ -23,7 +23,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::post('/home', [SubjectController::class, 'save'])->name('sendNewSubject');
+Route::post('/home', [SubjectController::class, 'save'])->name('proposeSubject');
+
+Route::post('/random', [SubjectController::class, 'randomSubject'])->name('randomSubject');
+
 Route::get('/home', function(){
     $subjects = new SubjectController;
     return view('home', ['subjects' => $subjects->subjectList()]);
